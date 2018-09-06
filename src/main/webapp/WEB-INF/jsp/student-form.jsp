@@ -10,6 +10,7 @@
 </head>
 <body>
 <form:form action="data" modelAttribute="student">
+    <!-- path attributes calls set method on its value setName, setAge -->
     Name: <form:input path="name"/>
     <br />
     Age: <form:input path="age" type="number"/>
@@ -20,6 +21,17 @@
     <form:select path="country">
         <form:options items="${student.countryOptions}"/>
     </form:select>
+    <br />
+    Favorite Programming Language:
+    Java <form:radiobutton path="programmingLanguage" value="Java" />
+    Ruby <form:radiobutton path="programmingLanguage" value="Ruby" />
+    Python <form:radiobutton path="programmingLanguage" value="Python" />
+    Erlang <form:radiobutton path="programmingLanguage" value="Erlang" />
+    <br />
+    Operating Systems:
+    Linux <form:checkbox path="operatingSystems" value="Linux" />
+    Windows <form:checkbox path="operatingSystems" value="Windows" />
+    Mac OS <form:checkbox path="operatingSystems" value="Mac OS" />
     <br />
     <input type="submit" />
 </form:form>

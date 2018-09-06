@@ -1,6 +1,8 @@
 package com.nursh.spring.demo;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 
 public class Student {
 
@@ -8,9 +10,12 @@ public class Student {
     private String email;
     private String age;
     private String country;
+    private String programmingLanguage;
+    private List<String> operatingSystems;
     private LinkedHashMap<String, String> countryOptions;
 
     public Student() {
+        operatingSystems = new ArrayList<>();
         countryOptions = new LinkedHashMap<>();
         countryOptions.put("FR", "France");
         countryOptions.put("BR", "Brazil");
@@ -53,6 +58,22 @@ public class Student {
 
     public LinkedHashMap<String, String> getCountryOptions() {
         return countryOptions;
+    }
+
+    public String getProgrammingLanguage() {
+        return programmingLanguage;
+    }
+
+    public void setProgrammingLanguage(String programmingLanguage) {
+        this.programmingLanguage = programmingLanguage;
+    }
+
+    public List<String> getOperatingSystems() {
+        return operatingSystems;
+    }
+
+    public void setOperatingSystems(List<String> operatingSystems) {
+        this.operatingSystems = operatingSystems;
     }
 
     @Override
