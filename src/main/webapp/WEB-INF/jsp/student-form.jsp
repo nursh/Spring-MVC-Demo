@@ -12,9 +12,15 @@
 <form:form action="data" modelAttribute="student">
     Name: <form:input path="name"/>
     <br />
-    age: <form:input path="age" type="number"/>
+    Age: <form:input path="age" type="number"/>
     <br />
     email: <form:input path="email" type="email" />
+    <br />
+    Country:
+    <form:select path="country">
+        <form:options items="${student.countryOptions}"/>
+    </form:select>
+    <br />
     <input type="submit" />
 </form:form>
 </body>

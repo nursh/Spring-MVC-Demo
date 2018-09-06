@@ -6,6 +6,10 @@
     <title>Student Page</title>
 </head>
 <body>
-<p>Student Identity: ${student.name} ${student.age} ${student.email}</p>
+<h1>Student Profile</h1>
+<p><b>Name</b>: ${student.name}</p>
+<p><b>Age</b>: ${student.age}</p>
+<p><b>Email</b>: ${student.email}</p>
+<p><b>Country</b>: ${student.country}</p>
 </body>
 </html>

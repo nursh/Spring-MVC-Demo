@@ -10,6 +10,6 @@
   <h1>Welcome to Spring JSP</h1>
   <a href="showForm">Show Form</a>
   <br />
-  <a href="student/form">Show Form</a>
+  <a href="student/form">Student Form</a>
 </body>
 </html>
