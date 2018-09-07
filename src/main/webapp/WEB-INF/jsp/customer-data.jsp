@@ -15,6 +15,7 @@
     <p><b>Last name: </b>${customer.lastName}</p>
     <p><b>Free passes: </b>${customer.freePasses}</p>
     <p><b>Postal code: </b>${customer.postalCode}</p>
+    <p><b>Course code: </b>${customer.courseCode}</p>
     <a href="/customer/form">&lAarr; Back to form</a>
 </body>
 </html>

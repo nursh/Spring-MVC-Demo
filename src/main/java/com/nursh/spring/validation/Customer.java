@@ -1,6 +1,8 @@
 package com.nursh.spring.validation;
 
 
+import com.nursh.spring.customAnnotation.CourseCode;
+
 import javax.validation.constraints.*;
 
 public class Customer {
@@ -18,6 +20,9 @@ public class Customer {
 
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Postal code must have 5chars/digits")
     private String postalCode;
+
+    @CourseCode(message = "Course Code must start with LUV") // add value= "ABC" -> changes default value of LUV
+    private String courseCode;
 
     public Customer() {
     }
@@ -52,5 +57,13 @@ public class Customer {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 }
