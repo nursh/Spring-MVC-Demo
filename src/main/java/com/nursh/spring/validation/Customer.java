@@ -1,8 +1,7 @@
 package com.nursh.spring.validation;
 
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 public class Customer {
 
@@ -11,6 +10,14 @@ public class Customer {
     @NotNull(message="Last Name is required")
     @Size(min=1, message = "Last name is required")
     private String lastName;
+
+    @NotNull(message = "Free passes is required")
+    @Min(value=0, message = "Must be greater than or equal to 0")
+    @Max(value=10, message = "Must be less than or equal to 10")
+    private Integer freePasses;
+
+    @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Postal code must have 5chars/digits")
+    private String postalCode;
 
     public Customer() {
     }
@@ -29,5 +36,21 @@ public class Customer {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public Integer getFreePasses() {
+        return freePasses;
+    }
+
+    public void setFreePasses(Integer freePasses) {
+        this.freePasses = freePasses;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
     }
 }
